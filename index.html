@@ -10,10 +10,6 @@
     <header>
       <h1>FR Dream Land</h1>
       <!-- <button id="reloadButton">reload</button> -->
-      <span class="header-search">
-        <input type="text" id="searchInput" placeholder="search" />
-        <button id="searchButton">Click</button>
-      </span>
       <h2 id="username"></h2>
     </header>
 
@@ -23,6 +19,11 @@
       </div>
       <div class="split-right">
         <div class="split-right__inner">
+          <span class="header-search">
+            <h3 class="new-post">Search</h3>
+            <input type="text" id="searchInput" />
+            <button class="button" id="searchButton">Click</button>
+          </span>
           <h3 class="new-post">NewPost</h3>
           <textarea id="postArea" rows="10" cols="50"></textarea>
           <br />
@@ -40,7 +41,7 @@
             <option value="excited">exited</option>
           </select>
 
-          <button id="submitButton">Post</button>
+          <button id="submitButton" class="button">Post</button>
         </div>
       </div>
     </div>
