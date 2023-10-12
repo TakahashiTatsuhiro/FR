@@ -2,13 +2,12 @@
 let searchWord = "";
 
 const images = [
-  './images/ariel.jpg',
-  './images/cute_dog.jpg',
-  './images/leaving_work.jpg',
-  './images/mountain.jpg',
-  './images/rever.jpg'
+  "./images/ariel.jpg",
+  "./images/cute_dog.jpg",
+  "./images/leaving_work.jpg",
+  "./images/mountain.jpg",
+  "./images/rever.jpg",
 ];
-
 
 // 関数======================================================
 // newsfeedの表示
@@ -40,7 +39,7 @@ function makeNewsfeed3(containerEl, _searchWord) {
     friendEl.className = "name";
     friendEl.innerText = `${post.friend}`;
     cardInEl.append(friendEl);
-    
+
     // cardOutにcardInを入れる
     cardOutEl.append(cardInEl);
 
@@ -81,7 +80,6 @@ function makeNewsfeed3(containerEl, _searchWord) {
     if (_searchWord === "") {
       containerEl.append(cardOutEl);
     } else if (cardOutEl.innerHTML.includes(_searchWord)) {
-      console.log("採否",_searchWord);
       containerEl.append(cardOutEl);
     }
   }
@@ -97,7 +95,6 @@ const getRandomElement = (array) => {
   const randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
 };
-
 
 // loadイベント======================================================
 window.addEventListener("load", () => {
@@ -122,7 +119,6 @@ window.addEventListener("load", () => {
 const searchButton = document.getElementById("searchButton");
 searchButton.addEventListener("click", () => {
   searchWord = document.getElementById("searchInput").value;
-  console.log("検索ワード", searchWord);
   load();
 });
 
@@ -135,25 +131,30 @@ searchButton.addEventListener("click", () => {
 // 投稿ボタン======================================================
 const submitButton = document.getElementById("submitButton");
 submitButton.addEventListener("click", () => {
-
+  // 実行要否判定
+  if (document.getElementById("postArea").value === "") {
+    return;
+  }
   // feeling選択
   const feelingSelect = document.getElementById("feelingSelect");
   const idx = feelingSelect.selectedIndex;
-
+  
+  // 投稿
   const postObj = {
     friend: localStorage.getItem("username"), //自分の名前
     text: document.getElementById("postArea").value, // 投稿内容
     feeling: feelingSelect.options[idx].value,
     image: getRandomElement(images),
-    icon: './icons/jack.jpeg',
+    icon: "./icons/jack.jpeg",
     timestamp: new Date(), // 現在時刻
   };
-
   if (bacefook.friends[postObj.friend] === undefined) {
     bacefook.friends[postObj.friend] = [];
   }
   bacefook.friends[postObj.friend].push(postObj);
   bacefook.newsfeed.push(postObj);
-
   load();
+
+  // 掃除
+  document.getElementById("postArea").value = "";
 });
