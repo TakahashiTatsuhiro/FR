@@ -126,7 +126,7 @@
     './icons/goofy.jpeg'
   ];
   const images = [
-    './images/ariel.jpg',
+    './images/sea.jpg',
     './images/cute_dog.jpg',
     './images/leaving_work.jpg',
     './images/mountain.jpg',
