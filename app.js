@@ -32,6 +32,7 @@ function makeNewsfeed3(containerEl, _searchWord) {
     const iconEl = document.createElement("img");
     iconEl.className = "icon";
     iconEl.src = post.icon;
+    iconEl.alt = "アイコン用画像";
     cardInEl.append(iconEl);
 
     // 名前
@@ -39,7 +40,6 @@ function makeNewsfeed3(containerEl, _searchWord) {
     friendEl.className = "name";
     friendEl.innerText = `${post.friend}`;
     cardInEl.append(friendEl);
-
     
     // cardOutにcardInを入れる
     cardOutEl.append(cardInEl);
@@ -54,6 +54,7 @@ function makeNewsfeed3(containerEl, _searchWord) {
     const imgEl = document.createElement("img");
     imgEl.className = "img";
     imgEl.src = post.image;
+    imgEl.alt = "投稿用画像";
     cardOutEl.append(imgEl);
 
     // 気分
@@ -80,6 +81,7 @@ function makeNewsfeed3(containerEl, _searchWord) {
     if (_searchWord === "") {
       containerEl.append(cardOutEl);
     } else if (cardOutEl.innerHTML.includes(_searchWord)) {
+      console.log("採否",_searchWord);
       containerEl.append(cardOutEl);
     }
   }
@@ -120,6 +122,7 @@ window.addEventListener("load", () => {
 const searchButton = document.getElementById("searchButton");
 searchButton.addEventListener("click", () => {
   searchWord = document.getElementById("searchInput").value;
+  console.log("検索ワード", searchWord);
   load();
 });
 
