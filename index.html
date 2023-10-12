@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>DIG Bacefook Newsfeed</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="moment.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>FR Dream Land</h1>
+      <!-- <button id="reloadButton">reload</button> -->
+      <span class="header-search">
+        <input type="text" id="searchInput" placeholder="search" />
+        <button id="searchButton">Click</button>
+      </span>
+      <h2 id="username"></h2>
+    </header>
+
+    <div class="split">
+      <div class="split-left">
+        <div id="newsfeed" class="split-left__inner"></div>
+      </div>
+      <div class="split-right">
+        <div class="split-right__inner">
+          <h3 class="new-post">NewPost</h3>
+          <textarea id="postArea" rows="10" cols="50"></textarea>
+          <br />
+
+          <select id="feelingSelect">
+            <option value="">--feeling--</option>
+            <option value=""></option>
+            <option value="happy">happy</option>
+            <option value="smug">smug</option>
+            <option value="lobestruck">lovestruck</option>
+            <option value="scared">scared</option>
+            <option value="tired">tired</option>
+            <option value="angry">angry</option>
+            <option value="frustrated">frustrated</option>
+            <option value="excited">exited</option>
+          </select>
+
+          <button id="submitButton">Post</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="dataGenerator.js"></script>
+  <script src="app.js"></script>
+</html>

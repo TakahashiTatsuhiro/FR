@@ -1,0 +1,150 @@
+body {
+  font-size: 15px;
+  padding-top: 100px;
+  line-height: 2;
+  color: #333;
+  background: #f0f0f0
+}
+h1 {
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  padding: 0 20px;
+  background: #c7a4b8;
+  color: #396048;
+}
+
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  position: fixed;
+  z-index: 10;
+  background-color: #396048;
+}
+
+.header-search {
+  display: block;
+  align-items: center;
+}
+
+#searchInput {
+  outline: none;
+  padding: 5px;
+  width: 60%;
+}
+
+#searchButton {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 7px;
+  outline: none;
+  border: none;
+  color: #c7a4b8;
+  background-color: #fff;
+  border-radius: 100vh;
+}
+
+#username {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0 40px;
+  color: #c7a4b8;
+}
+
+.split {
+  display: table;
+  width: 100%;
+}
+.split-item {
+  display: table-cell;
+  padding: 80px;
+  width: 50%;
+}
+.split-left {
+  display: table-cell;
+  width: 50%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.split-right {
+  display: table-cell;
+  position: relative;
+  /* padding: 80px; */
+}
+.split-left__inner {
+  width: 100%;
+}
+.split-right__inner {
+  background-color: #f0f0f0;
+  height: 100%;
+  position: fixed;
+}
+
+.cardOut {
+  margin: 10px 0px;
+  padding: 0 10px;
+  background-color: #fff;
+}
+
+.cardIn {
+  margin: 10px 0px;
+  /* padding: 10px; */
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 10%;
+  height: 10%;
+  /* padding-right: 10px; */
+  border-radius: 50%;
+}
+
+.feeling {
+  /* text-align: right; */
+  font-size: .7rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.post {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: .9rem;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.timestamp {
+  margin: 0;
+  font-size: .9rem;
+  text-align: right;
+  opacity: .5;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.new-post {
+  margin-bottom: 0;
+}
+
+.name {
+  font-size: 1.5rem;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
