@@ -99,6 +99,7 @@ const getRandomElement = (array) => {
 // loadイベント======================================================
 window.addEventListener("load", () => {
   // This is a check to see if there's a username stored
+  // localStorage.setItem("username", 'Johnny Depp');
   let username = localStorage.getItem("username");
   if (!username) {
     // Prompt for one if a username isn't found
@@ -144,7 +145,7 @@ submitButton.addEventListener("click", () => {
     friend: localStorage.getItem("username"), //自分の名前
     text: document.getElementById("postArea").value, // 投稿内容
     feeling: feelingSelect.options[idx].value,
-    image: getRandomElement(images),
+    image: './images/pirates.jpeg',
     icon: "./icons/jack.jpeg",
     timestamp: new Date(), // 現在時刻
   };
@@ -157,4 +158,5 @@ submitButton.addEventListener("click", () => {
 
   // 掃除
   document.getElementById("postArea").value = "";
+  feelingSelect.selectedIndex = 0;
 });
